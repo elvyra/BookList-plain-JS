@@ -1,0 +1,53 @@
+/* 
+Color palette and design idea link:
+https://www.behance.net/gallery/22040027/The-Right-Book-website?tracking_source=search-all%7Cbook%20website
+*/
+
+@import "./variables";
+@import "./mixins/hoverableComponent";
+
+@import "./components/header";
+@import "./components/nav";
+@import "./components/form";
+@import "./components/bookList";
+@import "./components/footer";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: $white !important;
+  color: $black !important;
+  font-weight: 400;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+a {
+  color: $secondary;
+  :hover {
+    color: $secondaryDark;
+  }
+}
+
+main {
+  margin-bottom: rem;
+}
+
+section,
+.section {
+  padding: 1rem 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.error {
+  color: $primaryDark;
+  padding: 1rem;
+}

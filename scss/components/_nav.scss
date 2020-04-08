@@ -1,0 +1,50 @@
+nav {
+  transform: translateY(-3.5rem);
+
+  &.navbar-light {
+    .navbar-toggler {
+      color: $white;
+      border-color: transparent;
+    }
+    .navbar-toggler-icon {
+      background-image: url(../../img/favicon.ico);
+    }
+  }
+
+  ul {
+    li {
+      text-transform: uppercase;
+      text-align: center;
+
+      @include hoverableComponent(
+        $dark,
+        $primary,
+        $dark,
+        $primary,
+        $primary,
+        $white,
+        $borderRadius,
+        $paddingButtons
+      );
+
+      @media (min-width: 992px) {
+        @include hoverableComponent(
+          $dark,
+          $primary,
+          $dark,
+          $primary,
+          $primary,
+          $white,
+          $borderRadius,
+          $paddingButtonsLarge
+        );
+      }
+
+      &.active {
+        background-color: $secondary;
+        border-color: $secondary;
+        color: $white;
+      }
+    }
+  }
+}

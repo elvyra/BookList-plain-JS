@@ -1,0 +1,42 @@
+form {
+  .button {
+    text-transform: uppercase;
+
+    @include hoverableComponent(
+      $light,
+      $primary,
+      $light,
+      $primary,
+      $white,
+      $white,
+      $borderRadius,
+      $paddingButtons
+    );
+
+    &-dark {
+      @include hoverableComponent(
+        $dark,
+        $primaryDark,
+        $dark,
+        $primaryDark,
+        $white,
+        $white,
+        $borderRadius,
+        $paddingButtons
+      );
+    }
+
+    &-primary {
+      @include hoverableComponent(
+        $primary,
+        $primaryDark,
+        $primary,
+        $primaryDark,
+        $white,
+        $white,
+        $borderRadius,
+        $paddingButtons
+      );
+    }
+  }
+}

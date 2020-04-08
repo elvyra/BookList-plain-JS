@@ -1,0 +1,20 @@
+$white: #fffeff;
+$black: #333;
+
+$light: #402f7f;
+$dark: #251657;
+
+$colorChangeValue: 10;
+$colorOpacityValue: 0.6;
+
+$primary: #fb6b48;
+$primaryDark: darken($primary, $colorChangeValue);
+
+$secondary: #6275c1;
+$secondaryDark: darken($secondary, $colorChangeValue);
+
+$borderRadius: 0px;
+$borderRadiusLarge: 5px;
+
+$paddingButtons: 0.2rem 1rem;
+$paddingButtonsLarge: 2rem 3rem;

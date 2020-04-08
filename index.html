@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cairo:300,400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.ico" />
+    <title>JS</title>
+  </head>
+  <body>
+    <header class="jumbotron-fluid text-center">
+      <div class="container">
+        <h1 class="display-3">Knygų katalogas</h1>
+        <p>
+          <span>Realizuotas knygų katalogo funkcionalumas DOM'e:</span>
+          išvedamos kategorijos, paspaudus ant kategorijos - sąrašo būdu
+          atvaizduojamos joje esančios knygos, naujas leidinys į katalogą
+          pridedamas užpildant formą, realizuotas knygų katalogo filtras pagal
+          ISBN, pavadinimą, kategoriją. (Vanilla JS)
+        </p>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light menu">
+        <button
+          class="navbar-toggler mx-auto"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          Meniu
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-md-center"
+          id="navbarTogglerDemo01"
+        >
+          <ul class="navbar-nav categories-list mb-1 mb-lg-0 mr-lg-5"></ul>
+          <ul class="navbar-nav buttons-list">
+            <li class="nav-item newBook">
+              Įvesti naują leidinį
+            </li>
+            <!--            
+            <li class="nav-item searchBook">
+              Ieškoti leidinio
+            </li>
+            -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <p class="error hide"></p>
+      <form class="section new-book hide">
+        <div class="form-row">
+          <div class="form-group col-md-6 col-xl-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="ISBN"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted">
+              ISBN prasideda skaitmeniu, tada bent vienas skaitmuo, taškas,
+              skliaustelis ar brūkšnelis
+            </small>
+          </div>
+          <div class="form-group col-md-6 col-xl-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Leidimo metai"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted">
+              Galimas intervalas nuo 1455 (išrastas spausdos presas) iki 2020.
+            </small>
+          </div>
+          <div class="form-group col-xl-6">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Bendroji antraštė"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted">
+              Ne trumpesnė nei 2 simboliai, tik spausdintini simboliai ir
+              skyrybos ženklai
+            </small>
+          </div>
+          <div class="form-group col-md-6 col-xl-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Apimtis (puslapiais)"
+              required
+            />
+            <small id="emailHelp" class="form-text text-muted">
+              Bent vienas skaitmuo
+            </small>
+          </div>
+          <div class="form-group col-md-6 col-xl-3">
+            <select class="categories custom-select" required> </select>
+            <small id="emailHelp" class="form-text text-muted">
+              Pasirinkite vieną iš kategorijų
+            </small>
+          </div>
+          <button class="button button-dark create col-md-6 col-xl-4">
+            Sukurti
+          </button>
+          <button class="button button-primary close col-md-6 col-xl-2">
+            &times;
+          </button>
+        </div>
+      </form>
+      <form class="section search-book hide">
+        <div class="form-row">
+          <input type="text" class="form-control col-xl-6" placeholder="ISBN" />
+          <input
+            type="text"
+            class="form-control col-xl-6"
+            placeholder="Bendroji antraštė"
+          />
+          <select class="categories custom-select col-xl-6"> </select>
+          <button class="button button-dark search col-md-6 col-xl-4">
+            Ieškoti
+          </button>
+          <button class="button button-primary close col-md-6 col-xl-2">
+            &times;
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+        <section><table class="books-list"></table></section>
+      </div>
+    </main>
+
+    <footer class="fixed-bottom text-center">
+      <div class="container">
+        Copyright &copy; 2019
+        <a
+          href="https://www.behance.net/gallery/22040027/The-Right-Book-website?tracking_source=search-all%7Cbook%20website"
+          target="_blank"
+          >Color scheme link</a
+        >
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

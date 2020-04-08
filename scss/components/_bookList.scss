@@ -1,0 +1,17 @@
+table.books-list {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: justify;
+
+  thead {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: $dark;
+    color: $white;
+  }
+
+  td {
+    border: 1px solid $dark;
+    padding: 2px 0.5rem;
+  }
+}

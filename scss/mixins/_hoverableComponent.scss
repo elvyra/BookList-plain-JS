@@ -1,0 +1,22 @@
+@mixin hoverableComponent(
+  $bgColor,
+  $bgHoverColor,
+  $borderColor,
+  $borderHoverColor,
+  $textColor,
+  $textHoverColor,
+  $borderRadius,
+  $padding
+) {
+  padding: $padding;
+  background-color: $bgColor;
+  color: $textColor;
+  border: 1px solid $borderColor;
+  border-radius: $borderRadius;
+  &:hover {
+    background-color: $bgHoverColor;
+    color: $textHoverColor;
+    border: 1px solid $borderHoverColor;
+    cursor: pointer;
+  }
+}

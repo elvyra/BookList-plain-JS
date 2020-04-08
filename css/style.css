@@ -1,0 +1,180 @@
+/* 
+Color palette and design idea link:
+https://www.behance.net/gallery/22040027/The-Right-Book-website?tracking_source=search-all%7Cbook%20website
+*/
+header {
+  background: #402f7f !important;
+  color: #fffeff !important;
+  -webkit-box-shadow: 0 -2px 16px #251657;
+          box-shadow: 0 -2px 16px #251657;
+  padding: 1rem 1.5rem 5rem;
+}
+
+nav {
+  -webkit-transform: translateY(-3.5rem);
+          transform: translateY(-3.5rem);
+}
+
+nav.navbar-light .navbar-toggler {
+  color: #fffeff;
+  border-color: transparent;
+}
+
+nav.navbar-light .navbar-toggler-icon {
+  background-image: url(../../img/favicon.ico);
+}
+
+nav ul li {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.2rem 1rem;
+  background-color: #251657;
+  color: #fb6b48;
+  border: 1px solid #251657;
+  border-radius: 0px;
+}
+
+nav ul li:hover {
+  background-color: #fb6b48;
+  color: #fffeff;
+  border: 1px solid #fb6b48;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  nav ul li {
+    padding: 2rem 3rem;
+    background-color: #251657;
+    color: #fb6b48;
+    border: 1px solid #251657;
+    border-radius: 0px;
+  }
+  nav ul li:hover {
+    background-color: #fb6b48;
+    color: #fffeff;
+    border: 1px solid #fb6b48;
+    cursor: pointer;
+  }
+}
+
+nav ul li.active {
+  background-color: #6275c1;
+  border-color: #6275c1;
+  color: #fffeff;
+}
+
+form .button {
+  text-transform: uppercase;
+  padding: 0.2rem 1rem;
+  background-color: #402f7f;
+  color: #fffeff;
+  border: 1px solid #402f7f;
+  border-radius: 0px;
+}
+
+form .button:hover {
+  background-color: #fb6b48;
+  color: #fffeff;
+  border: 1px solid #fb6b48;
+  cursor: pointer;
+}
+
+form .button-dark {
+  padding: 0.2rem 1rem;
+  background-color: #251657;
+  color: #fffeff;
+  border: 1px solid #251657;
+  border-radius: 0px;
+}
+
+form .button-dark:hover {
+  background-color: #fa4316;
+  color: #fffeff;
+  border: 1px solid #fa4316;
+  cursor: pointer;
+}
+
+form .button-primary {
+  padding: 0.2rem 1rem;
+  background-color: #fb6b48;
+  color: #fffeff;
+  border: 1px solid #fb6b48;
+  border-radius: 0px;
+}
+
+form .button-primary:hover {
+  background-color: #fa4316;
+  color: #fffeff;
+  border: 1px solid #fa4316;
+  cursor: pointer;
+}
+
+table.books-list {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: justify;
+}
+
+table.books-list thead {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #251657;
+  color: #fffeff;
+}
+
+table.books-list td {
+  border: 1px solid #251657;
+  padding: 2px 0.5rem;
+}
+
+footer {
+  padding: 0.5rem 2rem;
+  background-color: #402f7f;
+  color: #fffeff;
+}
+
+footer a {
+  margin-left: 0.5rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: #fffeff !important;
+  color: #333 !important;
+  font-weight: 400;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+a {
+  color: #6275c1;
+}
+
+a :hover {
+  color: #4459ac;
+}
+
+main {
+  margin-bottom: rem;
+}
+
+section,
+.section {
+  padding: 1rem 0;
+}
+
+.hide {
+  display: none !important;
+}
+
+.error {
+  color: #fa4316;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
